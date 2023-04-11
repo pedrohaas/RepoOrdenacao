@@ -1,4 +1,4 @@
-# Repositório de algoritmo de ordenaçã0
+# Repositório de algoritmo de ordenação
 ## Conceito do projeto
 Este projeto foi realizado com a finalidade de auxiliar os calouros da UFSCar-So e novos estudantes de programação sobre complexidade de algoritmos, ao reunir diversos dos algoritmos de ordenação mais básicos e conhecidos em um repositório que busca os ensinar de forma sucinta e prática seu funcionamento.
 ## Pré-Requisitos e recursos utilizados
