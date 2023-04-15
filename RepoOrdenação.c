@@ -35,13 +35,13 @@ int main() {
     int maior_num = 0, quantidade = 0, tipo_vetor = 0;
     char vetor;
 
-    printf("Selecione a forma do vetor:\na - vetor fixo digitado pelo usuário\nb - vetor aleatório gerado automaticamente\n"); scanf(" %c", &vetor);
+    printf("Selecione a forma do vetor:\na - vetor fixo digitado pelo usuario\nb - vetor aleatorio gerado automaticamente\n"); scanf(" %c", &vetor);
 
     if(vetor == 'a'){ //se o vetor for fixo, recebe apenas a quantidade de números do vetor 
         tipo_vetor = 1;
         printf("Insira a quantidade de numeros do vetor: "); scanf("%d", &quantidade); 
     }
-    if(vetor == 'b') { //se o vetor for aleatório recebe a quantidade de númeors e maior valor possível do vetor
+    if(vetor == 'b') { //se o vetor for aleatorio recebe a quantidade de númeors e maior valor possivel do vetor
         tipo_vetor = 2;
         printf("Insira a quantidade de numeros do vetor: "); scanf("%d", &quantidade); 
         printf("Insira o maior numero possivel do vetor: "); scanf("%d", &maior_num);
@@ -49,21 +49,21 @@ int main() {
 
     Selecao(maior_num, quantidade, tipo_vetor);
 
-    printf("\n\nObrigado por visitar nosso projeto para o HackoonSpace, entidade de cultura Hacker na Universidade Federal de São Carlos, campus Sorocaba.\n\n");
+    printf("\n\nObrigado por visitar nosso projeto para o HackoonSpace, entidade de cultura Hacker na Universidade Federal de Sao Carlos, campus Sorocaba.\n\n");
 
     return 0;
 }
 
 
 void MensagemDeBoasVindas () {
-    printf("\nOlá, jovem padawan! Seja bem vindo ao nosso repositório de algoritmos de ordenação, aqui você pode testar diferentes métodos,\ntanto iterativa quanto recursivamente, e ainda compreender o funcionamento de cada um deles!\n\n");
+    printf("\nOla, jovem padawan! Seja bem vindo ao nosso repositorio de algoritmos de ordenacao, aqui você pode testar diferentes metodos,\ntanto iterativa quanto recursivamente, e ainda compreender o funcionamento de cada um deles!\n\n");
 }
 
 void Selecao(int numeros, int quantidade, int tipoVet) {
 
     int opcao = 0;
 
-    printf("\nSelecione a opção que desejar: \n1 - Quero testar os algoritmos!\n2 - Quero aprender sobre recursão\n3 - Sair\n\n");
+    printf("\nSelecione a opcao que desejar: \n1 - Quero testar os algoritmos!\n2 - Quero aprender sobre recursao\n3 - Sair\n\n");
     scanf("%d", &opcao); 
 
     switch (opcao)
@@ -83,7 +83,7 @@ void Algortimos (int numeros, int quantidade, int tipoVet) {
     {
     case 1:
         for(int g = quantidade, f = 0; f < quantidade; g--, f++){
-            vetor[f] = g; //atribui os valores de quantidade até 1 no vetor de maneira decrescente
+            vetor[f] = g; //atribui os valores de quantidade ate 1 no vetor de maneira decrescente
         }
         break;
 
@@ -101,7 +101,7 @@ void Algortimos (int numeros, int quantidade, int tipoVet) {
   
     int opcao = 0;
 
-    printf("\nQual algoritmo de ordenação você deseja usar?\n1 - Bubblesort\n2 - InsertionSort\n3 - SelectionSort\n4 - MergeSort\n5 - QuickSort\n6 - HeapSort\n7 - Voltar...\n\n");
+    printf("\nQual algoritmo de ordenacao você deseja usar?\n1 - Bubblesort\n2 - InsertionSort\n3 - SelectionSort\n4 - MergeSort\n5 - QuickSort\n6 - HeapSort\n7 - Voltar...\n\n");
     scanf("%d", &opcao);
 
     switch (opcao)
@@ -129,13 +129,13 @@ void PrintaVetor(int vetor[], int quantidade) {
 }
 
 void TextoRecursao() {
-    printf("\nRecursão é uma técnica de programação que envolve a chamada de uma função a si mesma. \nEm outras palavras, uma função recursiva é aquela que se chama dentro de sua própria definição.\n\nAo invocar uma função recursiva, a mesma é capaz de resolver um problema dividindo-o em subproblemas menores, até que um ou mais casos-base sejam alcançados, \nmomento em que a recursão para e os resultados obtidos são combinados para resolver o problema original.\n\nUma função recursiva precisa sempre possuir um caso-base, que é uma condição que indica quando a recursão deve parar. \nCaso contrário, a função irá chamar a si mesma infinitamente, o que levará a um estouro de pilha e causará um erro no programa.\n\nA recursão pode ser uma ferramenta poderosa para resolver problemas complexos, especialmente aqueles que possuem uma estrutura recursiva natural, \ncomo algoritmos de busca em árvores, ordenação de listas encadeadas, entre outros.\n\nNo entanto, o uso excessivo de recursão pode levar a um consumo excessivo de memória e pode ser menos eficiente do que abordagens iterativas em alguns casos. \n\nPortanto, é importante considerar cuidadosamente o uso de recursão em um programa e verificar se há uma alternativa mais eficiente.\n\n");
+    printf("\nRecursao e uma tecnica de programacao que envolve a chamada de uma funcao a si mesma. \nEm outras palavras, uma funcao recursiva e aquela que se chama dentro de sua propria definicao.\n\nAo invocar uma funcao recursiva, a mesma e capaz de resolver um problema dividindo-o em subproblemas menores, ate que um ou mais casos-base sejam alcancados, \nmomento em que a recursao para e os resultados obtidos sao combinados para resolver o problema original.\n\nUma funcao recursiva precisa sempre possuir um caso-base, que e uma condicao que indica quando a recursao deve parar. \nCaso contrario, a funcao ira chamar a si mesma infinitamente, o que levara a um estouro de pilha e causara um erro no programa.\n\nA recursao pode ser uma ferramenta poderosa para resolver problemas complexos, especialmente aqueles que possuem uma estrutura recursiva natural, \ncomo algoritmos de busca em arvores, ordenacao de listas encadeadas, entre outros.\n\nNo entanto, o uso excessivo de recursao pode levar a um consumo excessivo de memoria e pode ser menos eficiente do que abordagens iterativas em alguns casos. \n\nPortanto, e importante considerar cuidadosamente o uso de recursao em um programa e verificar se ha uma alternativa mais eficiente.\n\n");
 }
 
 void swap(int vetor[], int a, int b) {int aux = vetor[a]; vetor[a] = vetor[b]; vetor[b] = aux;}
 
 void TextoBubblesort() {
-    printf("\nO algoritmo Bubblesort é um algoritmo de classificação (ou ordenação) simples e comumente usado, \nembora não seja tão eficiente quanto outros algoritmos mais avançados em termos de tempo de execução. \n\nEle funciona comparando cada par de elementos adjacentes na lista e trocando-os de posição se estiverem na ordem errada. \nEsse processo é repetido várias vezes até que toda a lista esteja ordenada.\n\nO funcionamento do algoritmo pode ser descrito em cinco passos simples:\n\n1 - Começando com o primeiro elemento (índice 0), compare-o com o próximo elemento (índice 1) na lista.\n2 - Se o primeiro elemento for maior que o próximo elemento, troque-os de posição.\n3 - Continue percorrendo a lista, comparando elementos adjacentes e trocando-os de posição se estiverem fora de ordem.\n4 - Repita esse processo para cada par de elementos adjacentes na lista, percorrendo a lista várias vezes até que nenhum elemento seja trocado de posição.\n5 - Quando nenhum elemento for mais trocado de posição, a lista estará ordenada.n");
+    printf("\nO algoritmo Bubblesort e um algoritmo de classificacao (ou ordenacao) simples e comumente usado, \nembora nao seja tao eficiente quanto outros algoritmos mais avancados em termos de tempo de execucao. \n\nEle funciona comparando cada par de elementos adjacentes na lista e trocando-os de posicao se estiverem na ordem errada. \nEsse processo e repetido varias vezes ate que toda a lista esteja ordenada.\n\nO funcionamento do algoritmo pode ser descrito em cinco passos simples:\n\n1 - Comecando com o primeiro elemento (indice 0), compare-o com o proximo elemento (indice 1) na lista.\n2 - Se o primeiro elemento for maior que o proximo elemento, troque-os de posicao.\n3 - Continue percorrendo a lista, comparando elementos adjacentes e trocando-os de posicao se estiverem fora de ordem.\n4 - Repita esse processo para cada par de elementos adjacentes na lista, percorrendo a lista varias vezes ate que nenhum elemento seja trocado de posicao.\n5 - Quando nenhum elemento for mais trocado de posicao, a lista estara ordenada");
 
 }
 
@@ -151,7 +151,7 @@ void bubblesort(int vetor[], int n) {
 }
 
 void TextoInsertionSort() {
-    printf("\nO insertionsort é um algoritmo de ordenação simples e eficiente, especialmente para listas pequenas ou para listas que já estão quase ordenadas. \n\nO algoritmo funciona de maneira semelhante ao processo de classificação de cartas em uma mão de baralho.\n\nO funcionamento do algoritmo pode ser descrito em quatro passos simples:\n\n1 - Começando com o segundo elemento da lista (índice 1), compare-o com o elemento anterior (índice 0) na lista.\n2 - Se o elemento anterior for maior que o atual, \nmova o elemento anterior uma posição à frente e continue a comparar com o próximo elemento anterior na lista até encontrar o local correto para inserir o elemento atual.\n3 - Repita esse processo para cada elemento subsequente na lista até que todos os elementos estejam ordenados.\n4 - Quando todos os elementos estiverem ordenados, a lista estará classificada.\n");
+    printf("\nO insertionsort e um algoritmo de ordenacao simples e eficiente, especialmente para listas pequenas ou para listas que ja estao quase ordenadas. \n\nO algoritmo funciona de maneira semelhante ao processo de classificacao de cartas em uma mao de baralho.\n\nO funcionamento do algoritmo pode ser descrito em quatro passos simples:\n\n1 - Comecando com o segundo elemento da lista (indice 1), compare-o com o elemento anterior (indice 0) na lista.\n2 - Se o elemento anterior for maior que o atual, \nmova o elemento anterior uma posicao à frente e continue a comparar com o proximo elemento anterior na lista ate encontrar o local correto para inserir o elemento atual.\n3 - Repita esse processo para cada elemento subsequente na lista ate que todos os elementos estejam ordenados.\n4 - Quando todos os elementos estiverem ordenados, a lista estara classificada.\n");
 
 }
 
@@ -168,7 +168,7 @@ void insertionsort(int vetor[], int n) {
 }
 
 void TextoSelectionSort() {
-    printf("\nO selectionsort é um algoritmo simples de ordenação que funciona encontrando o menor elemento da lista e colocando-o na primeira posição, \ndepois encontrando o próximo menor elemento e colocando-o na segunda posição e assim por diante. \n\nO algoritmo funciona selecionando o menor elemento da lista em cada iteração e trocando-o com o elemento na primeira posição da lista não classificada.\n\nO funcionamento do algoritmo pode ser descrito em três passos simples:\n\n1 - Defina o limite da lista classificada no início da lista como 0.\n2 - Encontre o menor elemento na lista não classificada (isto é, os elementos após o limite da lista classificada).\n3 - Troque o menor elemento encontrado com o primeiro elemento da lista não classificada e atualize o limite da lista classificada para incluir o elemento trocado.\n4 - Repita esses passos para cada elemento não classificado na lista até que toda a lista esteja ordenada.\n");
+    printf("\nO selectionsort e um algoritmo simples de ordenacao que funciona encontrando o menor elemento da lista e colocando-o na primeira posicao, \ndepois encontrando o proximo menor elemento e colocando-o na segunda posicao e assim por diante. \n\nO algoritmo funciona selecionando o menor elemento da lista em cada iteracao e trocando-o com o elemento na primeira posicao da lista nao classificada.\n\nO funcionamento do algoritmo pode ser descrito em três passos simples:\n\n1 - Defina o limite da lista classificada no inicio da lista como 0.\n2 - Encontre o menor elemento na lista nao classificada (isto e, os elementos apos o limite da lista classificada).\n3 - Troque o menor elemento encontrado com o primeiro elemento da lista nao classificada e atualize o limite da lista classificada para incluir o elemento trocado.\n4 - Repita esses passos para cada elemento nao classificado na lista ate que toda a lista esteja ordenada.\n");
 
 }
 
@@ -185,7 +185,7 @@ void selectionsort (int vetor[], int n) {
 }
 
 void TextoMergeSort() {
-    printf("\nO merge sort é um algoritmo de ordenação muito eficiente e rápido, que usa o princípio de divisão e conquista para dividir a lista em duas partes menores, \nordená-las separadamente e, em seguida, combiná-las em uma única lista ordenada. \n\nO algoritmo é conhecido por ter uma complexidade de tempo O(n log n), o que o torna uma escolha popular para a ordenação de grandes conjuntos de dados.\n\nO funcionamento do algoritmo pode ser descrito em três passos principais:\n\n1 - Divida a lista em duas metades, até que cada sublista contenha apenas um elemento ou esteja vazia.\n2 - Recursivamente ordene cada sublista dividida.\n3 - Combine as sub-listas ordenadas em uma única lista ordenada, usando o algoritmo de fusão (merge).\n");
+    printf("\nO merge sort e um algoritmo de ordenacao muito eficiente e rapido, que usa o principio de divisao e conquista para dividir a lista em duas partes menores, \nordena-las separadamente e, em seguida, combina-las em uma única lista ordenada. \n\nO algoritmo e conhecido por ter uma complexidade de tempo O(n log n), o que o torna uma escolha popular para a ordenacao de grandes conjuntos de dados.\n\nO funcionamento do algoritmo pode ser descrito em três passos principais:\n\n1 - Divida a lista em duas metades, ate que cada sublista contenha apenas um elemento ou esteja vazia.\n2 - Recursivamente ordene cada sublista dividida.\n3 - Combine as sub-listas ordenadas em uma única lista ordenada, usando o algoritmo de fusao (merge).\n");
 
 }
 
@@ -219,7 +219,7 @@ void mergesort(int vetor[], int aux[], int imin, int imax, int n) {
 }
 
 void TextoQuickSort() {
-    printf("\nO QuickSort é um algoritmo de ordenação eficiente que utiliza a estratégia de dividir e conquistar para ordenar uma lista de elementos. \n\nEle é muito utilizado em diversas aplicações devido à sua velocidade e eficiência, sendo capaz de ordenar grandes quantidades de dados em pouco tempo.\n\nO funcionamento do QuickSort pode ser resumido em três passos:\n\n1 - Escolha um elemento como o pivô da lista. Geralmente é escolhido o primeiro elemento da lista, mas também é possível escolher outros elementos, \ncomo o elemento central da lista ou um elemento escolhido aleatoriamente.\n2 - Reorganize a lista de modo que todos os elementos menores que o pivô estejam à sua esquerda, e todos os elementos maiores estejam à sua direita.\n3 - Recursivamente aplique o QuickSort para as sublistas à esquerda e à direita do pivô.\n");
+    printf("\nO QuickSort e um algoritmo de ordenacao eficiente que utiliza a estrategia de dividir e conquistar para ordenar uma lista de elementos. \n\nEle e muito utilizado em diversas aplicacões devido à sua velocidade e eficiência, sendo capaz de ordenar grandes quantidades de dados em pouco tempo.\n\nO funcionamento do QuickSort pode ser resumido em três passos:\n\n1 - Escolha um elemento como o pivô da lista. Geralmente e escolhido o primeiro elemento da lista, mas tambem e possivel escolher outros elementos, \ncomo o elemento central da lista ou um elemento escolhido aleatoriamente.\n2 - Reorganize a lista de modo que todos os elementos menores que o pivô estejam à sua esquerda, e todos os elementos maiores estejam à sua direita.\n3 - Recursivamente aplique o QuickSort para as sublistas à esquerda e à direita do pivô.\n");
 
 }
 
@@ -250,7 +250,7 @@ void quicksort(int vetor[], int imin, int imax, int n) {
 }
 
 void TextoHeapsort() {
-    printf("\nO HeapSort é um algoritmo de ordenação que utiliza uma estrutura de dados chamada Heap para ordenar uma lista de elementos. \n\nA Heap é uma árvore binária completa que satisfaz a propriedade de Heap, que pode ser Max-Heap ou Min-Heap. Na Max-Heap, \ncada nó pai é maior ou igual a seus filhos, enquanto na Min-Heap, cada nó pai é menor ou igual a seus filhos.\n\nO funcionamento do HeapSort pode ser resumido em dois passos:\n\n1 - Construir uma Max-Heap com a lista de elementos.\n2 - Extrair o elemento máximo da Heap e colocá-lo no final da lista. Em seguida, reconstruir a Heap e repetir o processo até que todos os elementos estejam ordenados.\n");
+    printf("\nO HeapSort e um algoritmo de ordenacao que utiliza uma estrutura de dados chamada Heap para ordenar uma lista de elementos. \n\nA Heap e uma arvore binaria completa que satisfaz a propriedade de Heap, que pode ser Max-Heap ou Min-Heap. Na Max-Heap, \ncada no pai e maior ou igual a seus filhos, enquanto na Min-Heap, cada no pai e menor ou igual a seus filhos.\n\nO funcionamento do HeapSort pode ser resumido em dois passos:\n\n1 - Construir uma Max-Heap com a lista de elementos.\n2 - Extrair o elemento maximo da Heap e coloca-lo no final da lista. Em seguida, reconstruir a Heap e repetir o processo ate que todos os elementos estejam ordenados.\n");
 
 }
 
