@@ -26,3 +26,9 @@ gcc main.c -o main
 ## Autores
 * Daniella Yuka Hirosue
 * Pedro Henrique Alves de Araujo Silva
+
+## Imagens/screenshot
+
+![Imagem1](screenshots/imagem1.png)
+![Imagem2](screenshots/imagem2.png)
+![Imagem3](screenshots/imagem3.png)
